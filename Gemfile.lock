@@ -61,6 +61,9 @@ GEM
       treetop (~> 1.4.8)
     mime-types (1.25.1)
     multi_json (1.10.1)
+    neat (1.6.0)
+      bourbon (>= 3.1)
+      sass (>= 3.3)
     pg (0.17.1)
     polyglot (0.3.4)
     rack (1.4.5)
@@ -88,6 +91,7 @@ GEM
     rake (10.3.2)
     rdoc (3.12.2)
       json (~> 1.4)
+    refills (0.0.2)
     sass (3.3.7)
     sass-rails (3.2.6)
       railties (~> 3.2.0)
@@ -116,7 +120,9 @@ DEPENDENCIES
   coffee-rails (~> 3.2.1)
   haml-rails
   jquery-rails
+  neat
   pg
   rails (= 3.2.18)
+  refills
   sass-rails (~> 3.2.3)
   uglifier (>= 1.0.3)
