@@ -1,4 +1,4 @@
-require "instagram"
+
 
 CALLBACK_URL = "http://localhost:3000"
 
