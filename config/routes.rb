@@ -2,6 +2,10 @@ OverThereApp::Application.routes.draw do
 
   resources :main, only: [:index, :show], as: '/'
 
+  # Boroughs routes added only for purposes of designing partials.
+  # Should be deleted afterwards.
+  resources :boroughs, only: :show
+
   root to: 'main#index'
 
   # The priority is based upon order of creation:
