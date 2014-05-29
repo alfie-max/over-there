@@ -10,7 +10,8 @@ gem 'bourbon'
 gem 'instagram'
 gem 'httparty'
 gem 'json'
-
+gem 'neat'
+gem 'refills'
 gem 'haml-rails'
 
 
