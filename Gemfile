@@ -7,6 +7,7 @@ gem 'rails', '3.2.18'
 
 gem 'pg'
 gem 'bourbon'
+gem 'instagram'
 
 gem 'haml-rails'
 
