@@ -141,11 +141,8 @@ DEPENDENCIES
   httparty
   instagram
   jquery-rails
-<<<<<<< HEAD
   json
-=======
   neat
->>>>>>> 599b41eafbe46580ff7e37151a5dfb10311cb16f
   pg
   rails (= 3.2.18)
   refills
