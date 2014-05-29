@@ -12,6 +12,10 @@ gem 'instagram'
 gem 'haml-rails'
 
 
+# Gems for API usage
+gem 'yelpster'
+
+
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
