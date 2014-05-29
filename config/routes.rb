@@ -1,4 +1,9 @@
 OverThereApp::Application.routes.draw do
+
+  resources :main, only: [:index, :show], as: '/'
+
+  root to: 'main#index'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

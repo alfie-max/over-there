@@ -29,6 +29,9 @@ GEM
       i18n (~> 0.6, >= 0.6.4)
       multi_json (~> 1.0)
     arel (3.0.3)
+    bourbon (4.0.2)
+      sass (~> 3.3)
+      thor
     builder (3.0.4)
     coffee-rails (3.2.2)
       coffee-script (>= 2.2.0)
@@ -39,6 +42,7 @@ GEM
     coffee-script-source (1.7.0)
     erubis (2.7.0)
     execjs (2.1.0)
+<<<<<<< HEAD
     faraday (0.9.0)
       multipart-post (>= 1.2, < 3)
     faraday_middleware (0.9.1)
@@ -48,6 +52,15 @@ GEM
       faraday_middleware (>= 0.8)
       hashie (>= 1.0, < 3.0.0)
     hashie (2.1.1)
+=======
+    haml (4.0.5)
+      tilt
+    haml-rails (0.4)
+      actionpack (>= 3.1, < 4.1)
+      activesupport (>= 3.1, < 4.1)
+      haml (>= 3.1, < 4.1)
+      railties (>= 3.1, < 4.1)
+>>>>>>> master
     hike (1.2.3)
     i18n (0.6.9)
     journey (1.0.4)
@@ -112,8 +125,13 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bourbon
   coffee-rails (~> 3.2.1)
+<<<<<<< HEAD
   foursquare2
+=======
+  haml-rails
+>>>>>>> master
   jquery-rails
   pg
   rails (= 3.2.18)

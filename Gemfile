@@ -6,7 +6,12 @@ gem 'rails', '3.2.18'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'pg'
+
 gem 'foursquare2'
+
+gem 'bourbon'
+
+gem 'haml-rails'
 
 
 # Gems used only for assets and not required
