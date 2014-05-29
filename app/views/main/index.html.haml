@@ -1,8 +1,10 @@
 .hero
   .hero-inner
-    %a.hero-logo{href: ""}
-      %img{alt: "", src: "https://raw.github.com/Magnus-G/Random/master/placeholder_logo_1.png"}/
+    .hero-logo
+      = render 'logo'
     .hero-copy
-      %h1 Short description of Product
-      %p A few reasons why this product is worth using, who is it for and why do they need it.
-    %button Learn More
+      %h1 Over There
+      %p
+        Are you over it? What's it like over there? Find out exactly how hip your area is, over here!
+
+      %input{type: :text, placeholder: "Search By Postcode"}
