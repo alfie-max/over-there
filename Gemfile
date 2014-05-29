@@ -7,9 +7,11 @@ gem 'rails', '3.2.18'
 
 gem 'pg'
 gem 'bourbon'
+gem 'instagram'
+gem 'httparty'
+gem 'json'
 gem 'neat'
 gem 'refills'
-
 gem 'haml-rails'
 
 
