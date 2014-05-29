@@ -1,0 +1,49 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  inner_outer: MyString
+  population: MyString
+  population_density: 9.99
+  average_age: 9.99
+  population_percent_youth: 9.99
+  population_percent_working: 9.99
+  population_percent_senior: 9.99
+  population_percent_foreign: 9.99
+  first_largest_immigrant_group: MyString
+  second_largest_immigrant_group: MyString
+  third_largest_immigrant_group: MyString
+  employment_rate: 9.99
+  gross_annual_pay: MyString
+  crime_rates_per_capita: 9.99
+  percent_greenspace: 9.99
+  percent_cycling_adults: MyString
+  life_satisfaction_score: 9.99
+  worthwhileness_score: 9.99
+  happiness_score: 9.99
+  anxiety_score: 9.99
+  political_control: MyString
+
+two:
+  name: MyString
+  inner_outer: MyString
+  population: MyString
+  population_density: 9.99
+  average_age: 9.99
+  population_percent_youth: 9.99
+  population_percent_working: 9.99
+  population_percent_senior: 9.99
+  population_percent_foreign: 9.99
+  first_largest_immigrant_group: MyString
+  second_largest_immigrant_group: MyString
+  third_largest_immigrant_group: MyString
+  employment_rate: 9.99
+  gross_annual_pay: MyString
+  crime_rates_per_capita: 9.99
+  percent_greenspace: 9.99
+  percent_cycling_adults: MyString
+  life_satisfaction_score: 9.99
+  worthwhileness_score: 9.99
+  happiness_score: 9.99
+  anxiety_score: 9.99
+  political_control: MyString
