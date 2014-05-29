@@ -59,7 +59,15 @@ GEM
       railties (>= 3.1, < 4.1)
     hashie (2.1.1)
     hike (1.2.3)
+    httparty (0.13.1)
+      json (~> 1.8)
+      multi_xml (>= 0.5.2)
     i18n (0.6.9)
+    instagram (1.0.0)
+      faraday (>= 0.7, < 0.10)
+      faraday_middleware (>= 0.8, < 0.10)
+      hashie (>= 0.4.0)
+      multi_json (~> 1.0, >= 1.0.3)
     journey (1.0.4)
     jquery-rails (3.1.0)
       railties (>= 3.0, < 5.0)
@@ -71,6 +79,12 @@ GEM
     mime-types (1.25.1)
     multi_json (1.10.1)
     multipart-post (2.0.0)
+    multi_xml (0.5.5)
+    multipart-post (2.0.0)
+    neat (1.6.0)
+      bourbon (>= 3.1)
+      sass (>= 3.3)
+    oauth (0.4.7)
     pg (0.17.1)
     polyglot (0.3.4)
     rack (1.4.5)
@@ -98,6 +112,7 @@ GEM
     rake (10.3.2)
     rdoc (3.12.2)
       json (~> 1.4)
+    refills (0.0.2)
     sass (3.3.7)
     sass-rails (3.2.6)
       railties (~> 3.2.0)
@@ -117,6 +132,9 @@ GEM
     uglifier (2.5.0)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
+    yelpster (1.2.1)
+      json (>= 1.1.1)
+      oauth (>= 0.4.5)
 
 PLATFORMS
   ruby
@@ -126,8 +144,14 @@ DEPENDENCIES
   coffee-rails (~> 3.2.1)
   foursquare2
   haml-rails
+  httparty
+  instagram
   jquery-rails
+  json
+  neat
   pg
   rails (= 3.2.18)
+  refills
   sass-rails (~> 3.2.3)
   uglifier (>= 1.0.3)
+  yelpster

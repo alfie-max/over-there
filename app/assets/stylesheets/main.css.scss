@@ -1,0 +1,68 @@
+.hero {
+  $hero-background: desaturate(darken($base-accent-color, 20), 30); 
+  $hero-color: white;
+
+  background: url(/images/London-Fields.jpg);
+  background-color: $hero-background;
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+  padding-bottom: 4em;
+
+  .hero-logo {
+    height: 10em;
+    margin-bottom: 1em;
+    .logo_hat {
+      fill: #ff0080;
+    }
+    .logo_glasses {
+      fill: #ffff00
+    }
+  }
+
+  .hero-inner {
+    @include outer-container;
+    @include clearfix;
+    padding: 3em;
+    margin: auto;
+    text-align: center;
+    color: $hero-color;
+
+    button {
+      @include button(simple, $base-accent-color);
+      font-size: $base-font-size;
+      outline: none;
+    }
+
+    .hero-copy {
+      padding: 10px;
+      text-align: center;
+      background: rgba(255,102,102,0.5);
+      opacity: 25%;
+      
+      h1 {
+        font-size: 1.4em;
+        margin-bottom: .2em;
+
+        @include media($large-screen) {
+          font-size: 1.8em;
+        }
+      }
+
+      p {
+        margin: auto;
+        margin-bottom: 3em; 
+        font-weight: 400;
+
+        @include media($large-screen) {
+          font-size: 1.2em;
+          max-width: 40%;
+        }
+      }
+      input {
+        width: 165px;
+        display: inline-block;
+      }
+    }
+  }
+}
