@@ -1,6 +1,8 @@
 class ClientsController < ApplicationController
   
-  def find_hipster_shit
+  def index
     c = Client.new
-    c.search_venues(:ll => '51.5224405,-0.1094789', :query => 'hipster')
+    @clients = c.search_venues(:ll => '51.5224405,-0.1094789', :query => 'hipster')
   end
+
+end
