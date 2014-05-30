@@ -118,6 +118,7 @@ body {
 }
 
 
+
 #show-logo{
     height: 3em;
     margin-bottom: 1em;
@@ -138,8 +139,10 @@ body {
   margin-top: 5px;
 }
 
+
 .full-width {
   width: 100% !important;
+  height: initial !important;
 }
 
 .grid-item {
@@ -157,4 +160,69 @@ body {
     margin-top: 13px !important;
     margin-left: 5px !important;
   }
+}
+
+.zoopla-text{
+  margin-right: 0;
+  margin-left: 0;
+  width: 400px;
+}
+
+p.zoopla-text{
+  font-size: 0.8em;
+
+#borough-show-left {
+  float: left;
+  width: 45%;
+  margin: 50px;
+}
+
+#borough-show-right {
+  float: right;
+  width: 45%;
+  margin: 50px 10px;
+}
+
+.people {
+  fill: #5FBEBE;
+}
+
+.crime {
+  fill: #A7BB75;
+}
+
+.greenspace {
+  fill: #98C79A;
+}
+
+.population_percent_youth {
+  background-color: #5FBEBE;
+}
+
+.population_percent_working {
+  background-color: #98C79A;
+}
+
+.population_percent_senior {
+  background-color: #6997B1;
+}
+
+.population_percent_foreign {
+  background-color: #A7BB75;
+}
+
+.first-largest {
+  font-size: 50px;
+  color: #A7BB75;
+}
+
+.second-largest {
+  font-size: 40px;
+  color: #6997B1;
+}
+
+.third-largest {
+  font-size: 25px;
+  color: #98C79A;
+
 }

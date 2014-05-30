@@ -35,6 +35,9 @@
             check ins
   .grid-item
     %img{:alt => "", :src => "https://s3.amazonaws.com/uploads.hipchat.com/39979/738355/6VYKUkuNvpGkC8J/zoopla.png"}
+      %h1.zoopla-text Zoopla Info
+      %p.zoopla-text
+        Hipsters have caused this areas property value to change by #{@postcode.growth_average}% in the last 5 years.
       %p
         = 'Hipsters have caused this areas property vaule to change by  '
         = @postcode.growth_average 
@@ -61,5 +64,4 @@
         =@postcode.check_place(types: "restaurant", keyword: "vegan").count
   .grid-item.grid-item-big.full-width
     %img{:alt => "", :src => "/json_banks_e8_3sh.png"}
-      %h1 Jason's div
-      %p
+    = render partial: 'borough', locals: {borough: @postcode.borough}
