@@ -1,0 +1,7 @@
+class InstagramController < ApplicationController
+
+  def index
+    @instagram = Instagram.user_recent_media("8035257", {:count => 1})
+  end
+
+end
