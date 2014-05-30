@@ -29,6 +29,7 @@ class Postcode < ActiveRecord::Base
     if self.check_place(types: "restaurant", keyword: "vegan").count > 1
       ranking += 1
     end
+    ranking
 
   end
 
