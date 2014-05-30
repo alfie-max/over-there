@@ -7,6 +7,11 @@
       %p
         Are you over it? What's it like over there? Find out exactly how hip your area is, over here!
 
-      =form_for @postcode do |f|
-        = f.text_field :postcode, placeholder: "Search By Postcode"
-        = f.submit "Search"
+      .search-bar
+        .search-and-submit
+          =form_for @postcode do |f|
+            = f.search_field :postcode, placeholder: "Search By Postcode"
+            %button{type: "submit"}
+              %img{src: "https://raw.githubusercontent.com/Magnus-G/Random/master/search-icon-black.png"}
+    
+    %p.notice= notice

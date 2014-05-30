@@ -21,6 +21,7 @@ gem 'haml-rails'
 # Gems for API usage
 gem 'yelpster'
 gem 'geocoder'
+gem 'uk_postcode'
 
 group :development, :test do
   gem 'pry-rails'

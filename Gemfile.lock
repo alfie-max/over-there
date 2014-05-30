@@ -150,6 +150,7 @@ GEM
     uglifier (2.5.0)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
+    uk_postcode (1.0.0)
     yelpster (1.2.1)
       json (>= 1.1.1)
       oauth (>= 0.4.5)
@@ -177,4 +178,5 @@ DEPENDENCIES
   refills
   sass-rails (~> 3.2.3)
   uglifier (>= 1.0.3)
+  uk_postcode
   yelpster
