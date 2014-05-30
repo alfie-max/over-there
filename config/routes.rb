@@ -1,6 +1,8 @@
 OverThereApp::Application.routes.draw do
 
-  resources :main, only: [:index, :show], as: '/'
+  resources :postcodes
+
+  resources :main, only: [:index], as: '/'
 
   root to: 'main#index'
 

@@ -7,5 +7,6 @@
       %p
         Are you over it? What's it like over there? Find out exactly how hip your area is, over here!
 
-      =form_for :postcode do |f|
+      =form_for @postcode do |f|
         = f.text_field :postcode, placeholder: "Search By Postcode"
+        = f.submit "Search"
