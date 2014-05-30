@@ -37,6 +37,7 @@ class Postcode < ActiveRecord::Base
       shop_count << check_place(name: shop, types: "bicycle_store").count
     end
     shop_count.inject(0, :+)
+  end
 
   def instagram
     min_timestamp = 1.week.ago.to_time.to_i
