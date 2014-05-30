@@ -1,24 +1,3 @@
-
-%h1=@postcode.postcode
-%h2=@postcode.borough.name
-
-
-%p
-  Big Chain Coffee:
-  =@postcode.count_high_street_coffee
-
-%p
-  Bike Shops:
-  =@postcode.check_place(types: "bicycle_store").count
-%p
-  Independent Bike Shops:
-  =@postcode.check_place(types: "bicycle_store").count - @postcode.count_high_street_bikes
-
-%p
-  Vegan Spots:
-  =@postcode.check_place(types: "restaurant", keyword: "vegan").count
-
-
 .grid-items
   %a.grid-item{:href => "javascript:void(0)"}
     %img{:alt => "", :src => "https://raw.github.com/Magnus-G/Random/master/placeholder_logo_1.png"}
@@ -64,7 +43,6 @@
       %h1 Item
       %p Lorem ipsum dolor sit amet, elit. Rem, illum.
 
-
 / %p
 /   Big Chain Coffee:
 /   =@postcode.count_high_street_coffee
@@ -75,3 +53,7 @@
 / %p
 /   Independent Bike Shops:
 /   =@postcode.check_place(types: "bicycle_store").count - @postcode.count_high_street_bikes
+
+/ %p
+/   Vegan Spots:
+/   =@postcode.check_place(types: "restaurant", keyword: "vegan").count
