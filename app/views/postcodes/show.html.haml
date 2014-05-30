@@ -47,22 +47,22 @@
         = @postcode.growth_average 
         ='% of the last 5 years.'
   .grid-item
-    %img{:alt => "", :src => "https://s3.amazonaws.com/uploads.hipchat.com/39979/738355/1W0nrMIz5NzEGHp/new-google-logo-knockoff.png"}
+    %img{:alt => "", :src => "/coffee.png"}
       %h1 Big Chain Coffee Shops
       %p 
         =@postcode.count_high_street_coffee
   %a.grid-item{:href => "javascript:void(0)"}
-    %img{:alt => "", :src => "https://s3.amazonaws.com/uploads.hipchat.com/39979/738355/1W0nrMIz5NzEGHp/new-google-logo-knockoff.png"}
+    %img{:alt => "", :src => "/bike.png"}
       .grid_split
-        %h1 Bike Shops
+        %h1 Bike Shops (Corporate)
         %p 
           =@postcode.check_place(types: "bicycle_store").count
       .grid_split
-        %h1 Independent Shops
+        %h1 Independent  Bike Shops
         %p
           =@postcode.check_place(types: "bicycle_store").count - @postcode.count_high_street_bikes
   .grid-item{:href => "javascript:void(0)"}
-    %img{:alt => "", :src => "https://s3.amazonaws.com/uploads.hipchat.com/39979/738355/1W0nrMIz5NzEGHp/new-google-logo-knockoff.png"}
+    %img{:alt => "", :src => "/vegan.png"}
       %h1 Vegan Spots
       %p
         =@postcode.check_place(types: "restaurant", keyword: "vegan").count
