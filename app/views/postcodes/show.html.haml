@@ -1,4 +1,12 @@
 %h1=@postcode.postcode
 %h2=@postcode.borough
 -@clients.each do |client|
-  = client.name
+  %div
+    %h3= client.name
+    %p= client.categories.first.name
+    %p
+      = client.location.distance
+      meters away
+    %p
+      = client.stats.checkinsCount
+      check ins

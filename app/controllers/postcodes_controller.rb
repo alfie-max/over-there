@@ -19,3 +19,7 @@ class PostcodesController < ApplicationController
   end
 
 end
+
+
+
+# @clients = c.search_venues_by_tip(:ll => "51.5225340,-0.1094360", :radius => 1000,:query => 'hipster', :limit => 20)
