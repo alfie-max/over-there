@@ -26,6 +26,10 @@ class Postcode < ActiveRecord::Base
       ranking += 1
     end
 
+    if self.check_place(types: "restaurant", keyword: "vegan").count > 1
+      ranking += 1
+    end
+
   end
 
   def check_place(options = {})
