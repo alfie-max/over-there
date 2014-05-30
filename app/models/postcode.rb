@@ -28,7 +28,7 @@ class Postcode < ActiveRecord::Base
 
     url ="http://api.zoopla.co.uk/api/v1/average_sold_prices.json?postcode=#{ps}&output_type=outcode&area_type=postcodes&api_key=#{ENV['ZOOPLA_API_KEY']}"
     response = HTTParty.get(url)
-    areas = response['areas']
+    areas = response['areas'] rescue nil
         
     prices = areas.map { |area| area['average_sold_price_1year'].to_i }
     five_year_prices = areas.map { |area| area['average_sold_price_5year'].to_i }
