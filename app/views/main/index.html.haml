@@ -4,9 +4,7 @@
       = render 'logo'
     .hero-copy
       %h1 Over There
-      %p
-        Are you over it? What's it like over there? Find out exactly how hip your area is, over here!
-
+      %p Are you over it? What's it like over there? Find out exactly how hip your area is, over here!   
       .search-bar
         .search-and-submit
           =form_for @postcode do |f|
@@ -14,4 +12,4 @@
             %button{type: "submit"}
               %img{src: "https://raw.githubusercontent.com/Magnus-G/Random/master/search-icon-black.png"}
     
-    %p.notice= notice
+      %p.notice= notice
