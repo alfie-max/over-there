@@ -8,6 +8,13 @@
       %p
         Borough: 
         =@postcode.borough.name
+      %p Hipster Ranking: 
+      - if @postcode.ranking > 0
+        %p= "This is a hipster area!"
+      - elsif @postcode.ranking = 3
+        %p= "Yeeeeaaahh - this area is really hipster!"
+      - else 
+        %p= "This area is not hipster at all!"
   .grid-item.grid-item-big.grid-item-image.small-padding
     %img{:alt => "", :src => "/instagram.png"}
       %h1 Does this look Hipster to you?
@@ -39,6 +46,18 @@
       %h1 Big Chain Coffee Shops
       %p 
         =@postcode.count_high_street_coffee
+  %a.grid-item{:href => "javascript:void(0)"}
+    %img{:alt => "", :src => "https://raw.github.com/Magnus-G/Random/master/placeholder_logo_3.png"}
+    %img{:alt => "", :src => "https://s3.amazonaws.com/uploads.hipchat.com/39979/738355/1W0nrMIz5NzEGHp/new-google-logo-knockoff.png"}
+      .grid_split
+        %h1 Bike Shops
+        %p 
+          =@postcode.check_place(types: "bicycle_store").count
+      .grid_split
+        %h1 Independent Shops
+        %p
+          =@postcode.check_place(types: "bicycle_store").count - @postcode.count_high_street_bikes
+  %a.grid-item{:href => "javascript:void(0)"}
   .grid-item
     .grid_split
       %h1 Bike Shops
