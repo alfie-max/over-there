@@ -117,6 +117,18 @@ body {
   }
 }
 
+
+#show-logo{
+    height: 10em;
+    margin-bottom: 1em;
+    .logo_hat {
+      fill: #ff0080;
+    }
+    .logo_glasses {
+      fill: #ffff00
+    }
+  }
+
 .notice {
   font-size: 10px !important;
   margin-top: 5px !important;
