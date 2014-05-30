@@ -58,6 +58,8 @@ GEM
       faraday_middleware (>= 0.8)
       hashie (>= 1.0, < 3.0.0)
     geocoder (1.2.1)
+    google_places (0.20.0)
+      httparty
     haml (4.0.5)
       tilt
     haml-rails (0.4)
@@ -165,6 +167,7 @@ DEPENDENCIES
   coffee-rails (~> 3.2.1)
   foursquare2
   geocoder
+  google_places
   haml-rails
   httparty
   instagram

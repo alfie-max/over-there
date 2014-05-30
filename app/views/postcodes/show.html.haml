@@ -1,2 +1,14 @@
 %h1=@postcode.postcode
 %h2=@postcode.borough.name
+
+
+%p
+  Big Chain Coffee:
+  =@postcode.count_high_street_coffee
+
+%p
+  Bike Shops:
+  =@postcode.check_place(types: "bicycle_store").count
+%p
+  Independent Bike Shops:
+  =@postcode.check_place(types: "bicycle_store").count - @postcode.count_high_street_bikes

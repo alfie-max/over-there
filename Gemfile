@@ -22,6 +22,7 @@ gem 'haml-rails'
 gem 'yelpster'
 gem 'geocoder'
 gem 'uk_postcode'
+gem 'google_places'
 
 group :development, :test do
   gem 'pry-rails'
