@@ -5,3 +5,19 @@
   -@instagram.each do |instagram|
     = image_tag instagram["images"]["low_resolution"]["url"]
     = instagram["tags"]
+%p
+  = 'Average property price increase within the last 5 years: '
+  = @postcode.growth_average 
+  ='%'
+
+-@clients.each do |client|
+  %div
+    %h3= client.name
+    %p= client.categories.first.name
+    %p
+      = client.location.distance
+      meters away
+    %p
+      = client.stats.checkinsCount
+      check ins
+
