@@ -20,7 +20,7 @@ gem 'haml-rails'
 
 # Gems for API usage
 gem 'yelpster'
-
+gem 'geocoder'
 
 group :development, :test do
   gem 'pry-rails'
