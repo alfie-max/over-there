@@ -26,7 +26,7 @@ class Postcode < ActiveRecord::Base
   def search_zoopla
     ps = postcode.to_s.downcase.tr(" ", "+")
 
-    url ="http://api.zoopla.co.uk/api/v1/average_sold_prices.json?postcode=#{ps}&output_type=outcode&area_type=postcodes&api_key=#{ENV['ZOOPLA_API_KEY']}"
+    url ="http://api.zoopla.co.uk/api/v1/average_sold_prices.json?postcode=#{ps}&output_type=outcode&area_type=postcodes&api_key=ckj3rw3k4hjh3xhtptht52ab"
     response = HTTParty.get(url)
     areas = response['areas'] rescue nil
         
