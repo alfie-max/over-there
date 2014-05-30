@@ -4,6 +4,10 @@ OverThereApp::Application.routes.draw do
 
   resources :main, only: [:index], as: '/'
 
+  # Boroughs routes added only for purposes of designing partials.
+  # Should be deleted afterwards.
+  resources :boroughs, only: :show
+
   root to: 'main#index'
 
   resources :clients

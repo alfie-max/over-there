@@ -1,5 +1,11 @@
 %h1=@postcode.postcode
 %h2=@postcode.borough
+
+%p
+  = 'Average property price increase within the last 5 years: '
+  = @postcode.growth_average 
+  ='%'
+
 -@clients.each do |client|
   %div
     %h3= client.name
