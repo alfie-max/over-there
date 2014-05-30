@@ -44,12 +44,6 @@
       %p Lorem ipsum dolor sit amet, elit. Rem, illum.
 
 
-.instagram
-  %h3 Does this look Hipster to you?
-  -@instagram.each do |instagram|
-    = image_tag instagram["images"]["low_resolution"]["url"]
-    = instagram["tags"]
-
 / %p
 /   Big Chain Coffee:
 /   =@postcode.count_high_street_coffee
