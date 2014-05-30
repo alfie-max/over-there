@@ -15,6 +15,24 @@ class Postcode < ActiveRecord::Base
     "London, #{postcode}"
   end
 
+  def ranking
+    ranking = 0
+
+    if self.count_high_street_coffee < 10
+      ranking += 1
+    end
+
+    if self.count_high_street_bikes > 5
+      ranking += 1
+    end
+
+    if self.check_place(types: "restaurant", keyword: "vegan").count > 1
+      ranking += 1
+    end
+    ranking
+
+  end
+
   def check_place(options = {})
     client = GooglePlaces::Client.new("AIzaSyCUwtN6QKlS5rxeXhS6gUcQgH4LqiUqyXQ")
 
