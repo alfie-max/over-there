@@ -11,14 +11,35 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140529233404) do
+ActiveRecord::Schema.define(:version => 20140530090753) do
 
   create_table "boroughs", :force => true do |t|
     t.string   "name"
+    t.string   "inner_outer"
+    t.float    "population"
+    t.float    "population_density"
+    t.float    "average_age"
+    t.float    "population_percent_youth"
+    t.float    "population_percent_working"
+    t.float    "population_percent_senior"
+    t.float    "population_percent_foreign"
+    t.string   "first_largest_immigrant_group"
+    t.string   "second_largest_immigrant_group"
+    t.string   "third_largest_immigrant_group"
+    t.float    "employment_rate"
+    t.float    "gross_annual_pay"
+    t.float    "crime_rates_per_capita"
+    t.float    "percent_greenspace"
+    t.float    "percent_cycling_adults"
+    t.float    "life_satisfaction_score"
+    t.float    "worthwhileness_score"
+    t.float    "happiness_score"
+    t.float    "anxiety_score"
+    t.string   "political_control"
+    t.datetime "created_at",                     :null => false
+    t.datetime "updated_at",                     :null => false
     t.float    "latitude"
     t.float    "longitude"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
     t.string   "location"
   end
 
