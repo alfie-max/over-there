@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .grid-items
   %a.grid-item{:href => "javascript:void(0)"}
     %img{:alt => "", :src => "https://raw.github.com/Magnus-G/Random/master/placeholder_logo_1.png"}
@@ -53,10 +54,8 @@
 /     %p
 /       = client.stats.checkinsCount
 /       check ins
-
-
-
-
-
-
-
+/ .instagram
+/   %h3 Does this look Hipster to you?
+/   -@instagram.each do |instagram|
+/     = image_tag instagram["images"]["low_resolution"]["url"]
+/     = instagram["tags"]

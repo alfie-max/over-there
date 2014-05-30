@@ -14,6 +14,8 @@ class PostcodesController < ApplicationController
 
   def show
     @postcode = Postcode.find(params[:id])
+    @instagram = @postcode.instagram
+    
     c = Client.new
     @clients = c.search_venues_by_tip(:ll => "#{@postcode.latitude},#{@postcode.longitude}", :radius => 1000,:query => 'hipster', :limit => 20)
   end
