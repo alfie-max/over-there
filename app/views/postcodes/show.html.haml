@@ -1,5 +1,6 @@
 %h1=@postcode.postcode
 %h2=@postcode.borough
+<<<<<<< HEAD
 
 
 %p
@@ -7,5 +8,5 @@
   = @postcode.growth_average 
   ='%'
 
-
-
+-@clients.each do |client|
+  = client.name
