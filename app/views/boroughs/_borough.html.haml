@@ -14,11 +14,25 @@
       Foreign Born Population
 
   %canvas{id: "myChart", width: "400", height:"400"}
+  %br
+  %h3 Three Largest Foreign Nationalities
+  %ul
+    %li.first-largest
+      =@borough.first_largest_immigrant_group
+    %li.second-largest
+      =@borough.second_largest_immigrant_group
+    %li.third-largest
+      =@borough.third_largest_immigrant_group
 #borough-show-right
   %h3 Each represents approximately 10,000 people
   %br
   - (@borough.population.to_i / 10000).times do
-    = render 'people'
+    = render 'people-svg'
+  %br
+  %h3 Each represents crime per 10,000 people
+  %br
+  - (@borough.crime_rates_per_capita.to_i / 10).times do
+    = render 'crime-svg'
 
 :javascript
       var ctx = $("#myChart").get(0).getContext("2d");
