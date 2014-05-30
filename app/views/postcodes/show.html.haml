@@ -36,11 +36,9 @@
             check ins
   .grid-item
     %img{:alt => "", :src => "https://s3.amazonaws.com/uploads.hipchat.com/39979/738355/6VYKUkuNvpGkC8J/zoopla.png"}
-      %h1 Zoopla Info
-      %p
-        = 'Hipsters have caused this areas property vaule to change by  '
-        = @postcode.growth_average 
-        ='% of the last 5 years.'
+      %h1.zoopla-text Zoopla Info
+      %p.zoopla-text
+        Hipsters have caused this areas property value to change by #{@postcode.growth_average}% in the last 5 years.
   .grid-item
     %img{:alt => "", :src => "https://raw.github.com/Magnus-G/Random/master/placeholder_logo_2.png"}
       %h1 Big Chain Coffee Shops
