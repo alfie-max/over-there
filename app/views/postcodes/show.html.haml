@@ -1,14 +1,16 @@
 %h1=@postcode.postcode
 %h2=@postcode.borough
 
-%p
-  = 'Average property price increase within the last 5 years: '
+.zoopla_container
+  %h3 Zoopla Info
+  = 'Hipsters have caused this areas property vaule to change by  '
   = @postcode.growth_average 
-  ='%'
+  ='% of the last 5 years.'
 
 -@clients.each do |client|
-  %div
-    %h3= client.name
+  .foursquare_container
+    %h3 Foursquare Info
+    %h4= client.name
     %p= client.categories.first.name
     %p
       = client.location.distance
