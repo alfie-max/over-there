@@ -39,12 +39,14 @@
         =@postcode.count_high_street_coffee
   %a.grid-item{:href => "javascript:void(0)"}
     %img{:alt => "", :src => "https://s3.amazonaws.com/uploads.hipchat.com/39979/738355/1W0nrMIz5NzEGHp/new-google-logo-knockoff.png"}
-      %h1 Bike Shops
-      %p 
-        =@postcode.check_place(types: "bicycle_store").count
-      %h1 Independent Bike Shops
-      %p
-        =@postcode.check_place(types: "bicycle_store").count - @postcode.count_high_street_bikes
+      .grid_split
+        %h1 Bike Shops
+        %p 
+          =@postcode.check_place(types: "bicycle_store").count
+      .grid_split
+        %h1 Independent Shops
+        %p
+          =@postcode.check_place(types: "bicycle_store").count - @postcode.count_high_street_bikes
   %a.grid-item{:href => "javascript:void(0)"}
     %img{:alt => "", :src => "https://raw.github.com/Magnus-G/Random/master/placeholder_logo_1.png"}
       %h1 Vegan Spots
