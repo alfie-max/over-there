@@ -58,8 +58,7 @@
         =@postcode.check_place(types: "restaurant", keyword: "vegan").count
   .grid-item.grid-item-big.full-width
     %img{:alt => "", :src => "/json_banks_e8_3sh.png"}
-      %h1 Jason's div
-      %p
+      = render partial: 'borough', locals: {borough: @postcode.borough}
 
 
 

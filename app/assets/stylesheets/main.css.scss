@@ -141,6 +141,7 @@ body {
 
 .full-width {
   width: 100% !important;
+  height: initial !important;
 }
 
 .grid-item {
@@ -202,12 +203,15 @@ body {
 
 .first-largest {
   font-size: 50px;
+  color: #A7BB75;
 }
 
 .second-largest {
   font-size: 40px;
+  color: #6997B1;
 }
 
 .third-largest {
   font-size: 25px;
+  color: #98C79A;
 }
