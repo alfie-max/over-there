@@ -2,16 +2,22 @@
   $hero-background: desaturate(darken($base-accent-color, 20), 30); 
   $hero-color: white;
 
-  background: url(https://raw.github.com/Magnus-G/Random/master/lake-transparent.png);
+  background: url(/images/London-Fields.jpg);
   background-color: $hero-background;
   background-repeat: no-repeat;
   background-position: top;
   background-size: cover;
   padding-bottom: 4em;
 
-  .hero-logo img {
-    height: 3em;
+  .hero-logo {
+    height: 10em;
     margin-bottom: 1em;
+    .logo_hat {
+      fill: #ff0080;
+    }
+    .logo_glasses {
+      fill: #ffff00
+    }
   }
 
   .hero-inner {
@@ -29,7 +35,10 @@
     }
 
     .hero-copy {
+      padding: 10px;
       text-align: center;
+      background: rgba(255,102,102,0.5);
+      opacity: 25%;
       
       h1 {
         font-size: 1.4em;
@@ -43,12 +52,19 @@
       p {
         margin: auto;
         margin-bottom: 3em; 
-        font-weight: 200;
+        font-weight: 400;
 
         @include media($large-screen) {
           font-size: 1.2em;
           max-width: 40%;
         }
+      }
+      input {
+        width: 175px;
+        display: inline-block;
+        text-align: center;
+        font-weight: 600;
+        color: #000080;
       }
     }
   }

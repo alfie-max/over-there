@@ -6,6 +6,9 @@ gem 'rails', '3.2.18'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'pg'
+
+gem 'foursquare2'
+
 gem 'bourbon'
 gem 'instagram'
 gem 'httparty'
@@ -17,7 +20,14 @@ gem 'haml-rails'
 
 # Gems for API usage
 gem 'yelpster'
+gem 'geocoder'
 
+group :development, :test do
+  gem 'pry-rails'
+  gem 'pry-stack_explorer'
+  gem 'binding_of_caller'
+  gem 'better_errors'
+end
 
 # Gems used only for assets and not required
 # in production environments by default.
