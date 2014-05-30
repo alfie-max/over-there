@@ -6,13 +6,13 @@
         =@postcode.postcode
       %p=@postcode.borough.name
   %a.grid-item.grid-item-big.grid-item-image{:href => "javascript:void(0)"}
-    %img{:alt => "", :src => "https://raw.github.com/Magnus-G/Random/master/placeholder_logo_2.png"}
+    %img{:alt => "", :src => "/instagram.png"}
       %h1 Does this look Hipster to you?
       -@instagram.each do |instagram|
         %p= image_tag instagram["images"]["low_resolution"]["url"]
         %p= instagram["tags"]
   %a.grid-item.grid-item-big{:href => "javascript:void(0)"}
-    %img{:alt => "", :src => "https://raw.github.com/Magnus-G/Random/master/placeholder_logo_3.png"}
+    %img{:alt => "", :src => "https://s3.amazonaws.com/uploads.hipchat.com/39979/738355/lKJ0C3dijXwSrSp/foursquare-logo_01.png"}
       %h1 Foursquare Info
       -@clients.each do |client|
         %p= client.name
@@ -24,7 +24,7 @@
           = client.stats.checkinsCount
           check ins
   %a.grid-item{:href => "javascript:void(0)"}
-    %img{:alt => "", :src => "https://raw.github.com/Magnus-G/Random/master/placeholder_logo_2.png"}
+    %img{:alt => "", :src => "https://s3.amazonaws.com/uploads.hipchat.com/39979/738355/6VYKUkuNvpGkC8J/zoopla.png"}
       %h1 Zoopla Info
       %p
         = 'Hipsters have caused this areas property vaule to change by  '
