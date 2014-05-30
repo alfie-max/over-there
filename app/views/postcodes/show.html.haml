@@ -13,13 +13,16 @@
         =@postcode.borough.name
   .grid-item.grid-item-big.grid-item-image.small-padding
     %img{:alt => "", :src => "/instagram.png"}
-      %h1 Does this look Hipster to you?
+      %h1 Around You...
+    .foursquare_slides
       -@instagram.each do |instagram|
-        %p= image_tag instagram["images"]["low_resolution"]["url"]
-        %p= instagram["tags"].join(", ")
+        .foursquare_info
+          %p= image_tag instagram["images"]["low_resolution"]["url"]
+          %p= instagram["tags"].join(", ")
   .grid-item.grid-item-big.small-padding
     %img{:alt => "", :src => "https://s3.amazonaws.com/uploads.hipchat.com/39979/738355/lKJ0C3dijXwSrSp/foursquare-logo_01.png"}
-      %h1 Foursquare Info
+      %h1 Checkins
+    .foursquare_slides
       -@clients.each do |client|
         .foursquare_info
           %p= client.name

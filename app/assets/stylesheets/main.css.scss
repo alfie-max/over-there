@@ -158,3 +158,15 @@ body {
     margin-left: 5px !important;
   }
 }
+
+.foursquare_slides {
+  display: inline-flex !important;
+  overflow-x: scroll !important;
+}
+
+.foursquare_info {
+  width: 250px;
+  height: 125px;
+  vertical-align: top;
+  display: inline-block;
+}
