@@ -1,62 +1,69 @@
+.header
+  =link_to root_path do
+    #show-logo
+      = render 'main/logo'
 .grid-items
-  %a.grid-item{:href => "javascript:void(0)"}
+  .grid-item
     %img{:alt => "", :src => "https://raw.github.com/Magnus-G/Random/master/placeholder_logo_1.png"}
       %h1
-        Zip Code
+        Postcode: 
         =@postcode.postcode
-      %p=@postcode.borough.name
-  %a.grid-item.grid-item-big.grid-item-image{:href => "javascript:void(0)"}
-    %img{:alt => "", :src => "https://raw.github.com/Magnus-G/Random/master/placeholder_logo_2.png"}
+      %p
+        Borough: 
+        =@postcode.borough.name
+  .grid-item.grid-item-big.grid-item-image.small-padding
+    %img{:alt => "", :src => "/instagram.png"}
       %h1 Does this look Hipster to you?
       -@instagram.each do |instagram|
         %p= image_tag instagram["images"]["low_resolution"]["url"]
-        %p= instagram["tags"]
-  %a.grid-item.grid-item-big{:href => "javascript:void(0)"}
-    %img{:alt => "", :src => "https://raw.github.com/Magnus-G/Random/master/placeholder_logo_3.png"}
+        %p= instagram["tags"].join(", ")
+  .grid-item.grid-item-big.small-padding
+    %img{:alt => "", :src => "https://s3.amazonaws.com/uploads.hipchat.com/39979/738355/lKJ0C3dijXwSrSp/foursquare-logo_01.png"}
       %h1 Foursquare Info
       -@clients.each do |client|
-        %p= client.name
-        %p= client.categories.first.name
-        %p
-          = client.location.distance
-          meters away
-        %p
-          = client.stats.checkinsCount
-          check ins
-  %a.grid-item{:href => "javascript:void(0)"}
-    %img{:alt => "", :src => "https://raw.github.com/Magnus-G/Random/master/placeholder_logo_2.png"}
+        .foursquare_info
+          %p= client.name
+          %p= client.categories.first.name
+          %p
+            = client.location.distance
+            meters away
+          %p
+            = client.stats.checkinsCount
+            check ins
+  .grid-item
+    %img{:alt => "", :src => "https://s3.amazonaws.com/uploads.hipchat.com/39979/738355/6VYKUkuNvpGkC8J/zoopla.png"}
       %h1 Zoopla Info
       %p
         = 'Hipsters have caused this areas property vaule to change by  '
         = @postcode.growth_average 
         ='% of the last 5 years.'
-  %a.grid-item{:href => "javascript:void(0)"}
+  .grid-item
     %img{:alt => "", :src => "https://raw.github.com/Magnus-G/Random/master/placeholder_logo_2.png"}
-      %h1 Last Grid Item
-      %p Lorem ipsum dolor sit amet, elit. Rem, illum.
-  %a.grid-item{:href => "javascript:void(0)"}
-    %img{:alt => "", :src => "https://raw.github.com/Magnus-G/Random/master/placeholder_logo_3.png"}
-      %h1 A Grid Item
-      %p Lorem ipsum dolor sit amet, elit. Rem, illum.
-  %a.grid-item{:href => "javascript:void(0)"}
+      %h1 Big Chain Coffee Shops
+      %p 
+        =@postcode.count_high_street_coffee
+  .grid-item
+    .grid_split
+      %h1 Bike Shops
+      %p 
+        =@postcode.check_place(types: "bicycle_store").count
+    .grid_split
+      %h1 Independent Shops
+      %p
+        =@postcode.check_place(types: "bicycle_store").count - @postcode.count_high_street_bikes
+  .grid-item{:href => "javascript:void(0)"}
     %img{:alt => "", :src => "https://raw.github.com/Magnus-G/Random/master/placeholder_logo_1.png"}
-      %h1 Item
-      %p Lorem ipsum dolor sit amet, elit. Rem, illum.
+      %h1 Vegan Spots
+      %p
+        =@postcode.check_place(types: "restaurant", keyword: "vegan").count
+  .grid-item.grid-item-big.full-width
+    %img{:alt => "", :src => "/json_banks_e8_3sh.png"}
+      %h1 Jason's div
+      %p
 
 
-.instagram
-  %h3 Does this look Hipster to you?
-  -@instagram.each do |instagram|
-    = image_tag instagram["images"]["low_resolution"]["url"]
-    = instagram["tags"]
+
 
 / %p
-/   Big Chain Coffee:
-/   =@postcode.count_high_street_coffee
-
-/ %p
-/   Bike Shops:
-/   =@postcode.check_place(types: "bicycle_store").count
-/ %p
-/   Independent Bike Shops:
-/   =@postcode.check_place(types: "bicycle_store").count - @postcode.count_high_street_bikes
+/   Vegan Spots:
+/   =@postcode.check_place(types: "restaurant", keyword: "vegan").count

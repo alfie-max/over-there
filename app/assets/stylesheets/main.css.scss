@@ -116,3 +116,45 @@ body {
     }
   }
 }
+
+
+#show-logo{
+    height: 10em;
+    margin-bottom: 1em;
+    .logo_hat {
+      fill: #ff0080;
+    }
+    .logo_glasses {
+      fill: #ffff00
+    }
+  }
+
+.notice {
+  font-size: 10px !important;
+  margin-top: 5px !important;
+}
+
+.grid-items {
+  margin-top: 5px;
+}
+
+.full-width {
+  width: 100% !important;
+}
+
+.grid-item {
+  cursor: auto !important;
+}
+
+.small-padding {
+  padding: 10px !important;
+  > img {
+    display: inline-block !important;
+  }
+  > h1 {
+    display: inline-block !important;
+    vertical-align: top !important;
+    margin-top: 13px !important;
+    margin-left: 5px !important;
+  }
+}
