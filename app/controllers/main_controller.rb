@@ -4,7 +4,10 @@ class MainController < ApplicationController
     @postcode = Postcode.new
   end
 
-  def show
+
+
+  def search
+
   end
 
   def search_zoopla

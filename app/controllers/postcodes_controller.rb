@@ -14,6 +14,8 @@ class PostcodesController < ApplicationController
 
   def show
     @postcode = Postcode.find(params[:id])
+    @instagram = @postcode.instagram
+    
   end
 
 end

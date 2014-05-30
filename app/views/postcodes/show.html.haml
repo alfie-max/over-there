@@ -1,2 +1,7 @@
 %h1=@postcode.postcode
 %h2=@postcode.borough
+
+.instagram
+  -@instagram.each do |instagram|
+    = image_tag instagram["images"]["low_resolution"]["url"]
+    = instagram["tags"]
