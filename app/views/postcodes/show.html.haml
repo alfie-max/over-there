@@ -13,8 +13,14 @@
     %img{:alt => "", :src => "https://raw.github.com/Magnus-G/Random/master/placeholder_logo_3.png"}
       %h1 Foursquare Info
       -@clients.each do |client|
-      
-      %p Lorem ipsum consectetur dolor sit amet, consectetur adipisicing elit. Rem, illum.
+      %p= client.name
+      %p= client.categories.first.name
+      %p
+        = client.location.distance
+        meters away
+      %p
+        = client.stats.checkinsCount
+        check ins
   %a.grid-item{:href => "javascript:void(0)"}
     %img{:alt => "", :src => "https://raw.github.com/Magnus-G/Random/master/placeholder_logo_2.png"}
       %h1 Zoopla Info
