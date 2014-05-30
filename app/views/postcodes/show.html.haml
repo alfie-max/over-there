@@ -2,9 +2,11 @@
   %a.grid-item{:href => "javascript:void(0)"}
     %img{:alt => "", :src => "https://raw.github.com/Magnus-G/Random/master/placeholder_logo_1.png"}
       %h1
-        Zip Code
+        Postcode: 
         =@postcode.postcode
-      %p=@postcode.borough.name
+      %p
+        Borough: 
+        =@postcode.borough.name
   %a.grid-item.grid-item-big.grid-item-image{:href => "javascript:void(0)"}
     %img{:alt => "", :src => "https://raw.github.com/Magnus-G/Random/master/placeholder_logo_2.png"}
       %h1 Does this look Hipster to you?
