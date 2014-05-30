@@ -7,8 +7,10 @@
       %p=@postcode.borough.name
   %a.grid-item.grid-item-big.grid-item-image{:href => "javascript:void(0)"}
     %img{:alt => "", :src => "https://raw.github.com/Magnus-G/Random/master/placeholder_logo_2.png"}
-      %h1 Grid Item With an Image
-      %p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, illum.
+      %h1 Does this look Hipster to you?
+      -@instagram.each do |instagram|
+        %p= image_tag instagram["images"]["low_resolution"]["url"]
+        %p= instagram["tags"]
   %a.grid-item.grid-item-big{:href => "javascript:void(0)"}
     %img{:alt => "", :src => "https://raw.github.com/Magnus-G/Random/master/placeholder_logo_3.png"}
       %h1 Foursquare Info
@@ -42,22 +44,11 @@
       %p Lorem ipsum dolor sit amet, elit. Rem, illum.
 
 
-/ -@clients.each do |client|
-/   .foursquare_container
-/     %h3 Foursquare Info
-/     %h4= client.name
-/     %p= client.categories.first.name
-/     %p
-/       = client.location.distance
-/       meters away
-/     %p
-/       = client.stats.checkinsCount
-/       check ins
-/ .instagram
-/   %h3 Does this look Hipster to you?
-/   -@instagram.each do |instagram|
-/     = image_tag instagram["images"]["low_resolution"]["url"]
-/     = instagram["tags"]
+.instagram
+  %h3 Does this look Hipster to you?
+  -@instagram.each do |instagram|
+    = image_tag instagram["images"]["low_resolution"]["url"]
+    = instagram["tags"]
 
 / %p
 /   Big Chain Coffee:
