@@ -4,7 +4,7 @@ class PostcodesController < ApplicationController
     @postcode = Postcode.new(params[:postcode])
 
     respond_to do |format|
-      if @postcode.save
+      if @postcode && @postcode.save
         format.html { redirect_to @postcode}
       else
         format.html { render 'main#index'}
