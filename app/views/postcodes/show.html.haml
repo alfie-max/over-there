@@ -1,3 +1,7 @@
+.header
+  =link_to root_path do
+    #show-logo
+      = render 'main/logo'
 .grid-items
   .grid-item
     %img{:alt => "", :src => "https://raw.github.com/Magnus-G/Random/master/placeholder_logo_1.png"}
@@ -39,15 +43,15 @@
       %p 
         =@postcode.count_high_street_coffee
   .grid-item
-    %img{:alt => "", :src => "https://s3.amazonaws.com/uploads.hipchat.com/39979/738355/1W0nrMIz5NzEGHp/new-google-logo-knockoff.png"}
+    .grid_split
       %h1 Bike Shops
       %p 
-        - local_bike_shops = @postcode.check_place(types: "bicycle_store").count
-        = local_bike_shops
-      %h1 Independent Bike Shops
+        =@postcode.check_place(types: "bicycle_store").count
+    .grid_split
+      %h1 Independent Shops
       %p
-        = local_bike_shops - @postcode.count_high_street_bikes
-  .grid-item
+        =@postcode.check_place(types: "bicycle_store").count - @postcode.count_high_street_bikes
+  .grid-item{:href => "javascript:void(0)"}
     %img{:alt => "", :src => "https://raw.github.com/Magnus-G/Random/master/placeholder_logo_1.png"}
       %h1 Vegan Spots
       %p

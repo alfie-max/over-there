@@ -59,6 +59,11 @@
       @include grid-item-columns($grid-item-columns);
     }
 
+     .grid_split {
+    display: inline-block;
+    width: 50%;
+    }
+
     @for $i from 1 to 8 { // assign colors from $grid-item-colors list
       &:nth-child(#{$i}) {
         $background-from-list: nth($grid-item-colors, $i);
