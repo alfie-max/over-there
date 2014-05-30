@@ -3,6 +3,7 @@
 %br
 #borough-show-left
   %h3 Population Demographics
+  %br
   %ul
     %li.population_percent_youth
       Youth Population 
@@ -12,7 +13,7 @@
       Senior Age Population
     %li.population_percent_foreign
       Foreign Born Population
-
+  %br
   %canvas{id: "myChart", width: "400", height:"400"}
   %br
   %h3 Three Largest Foreign Nationalities
@@ -23,6 +24,19 @@
       =@borough.second_largest_immigrant_group
     %li.third-largest
       =@borough.third_largest_immigrant_group
+  %br
+  %h3
+    Greenspace as a %age of total land: 
+    = "#{@borough.percent_greenspace}%"
+  - if @borough.percent_greenspace > 80
+    = render partial: 'greenspace-svg', locals: {size: "500px"}
+  - elsif @borough.percent_greenspace > 50%
+    = render partial: 'greenspace-svg', locals: {size: "300px"}
+  - elsif @borough.percent_greenspace > 30%
+    = render partial: 'greenspace-svg', locals: {size: "200px"}
+  - else
+    = render partial: 'greenspace-svg', locals: {size: "100px"}
+
 #borough-show-right
   %h3 Each represents approximately 10,000 people
   %br

@@ -120,11 +120,13 @@ body {
 #borough-show-left {
   float: left;
   width: 45%;
+  margin: 50px;
 }
 
 #borough-show-right {
   float: right;
   width: 45%;
+  margin: 50px 10px;
 }
 
 .people {
@@ -133,6 +135,10 @@ body {
 
 .crime {
   fill: #A7BB75;
+}
+
+.greenspace {
+  fill: #98C79A;
 }
 
 .population_percent_youth {
