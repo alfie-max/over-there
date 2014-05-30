@@ -6,6 +6,8 @@ OverThereApp::Application.routes.draw do
 
   root to: 'main#index'
 
+  resources :clients
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

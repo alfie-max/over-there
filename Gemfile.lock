@@ -54,6 +54,10 @@ GEM
     faraday_middleware (0.9.1)
       faraday (>= 0.7.4, < 0.10)
     geocoder (1.2.1)
+    foursquare2 (2.0.0)
+      faraday (~> 0.8)
+      faraday_middleware (>= 0.8)
+      hashie (>= 1.0, < 3.0.0)
     haml (4.0.5)
       tilt
     haml-rails (0.4)
@@ -159,6 +163,7 @@ DEPENDENCIES
   bourbon
   coffee-rails (~> 3.2.1)
   geocoder
+  foursquare2
   haml-rails
   httparty
   instagram
