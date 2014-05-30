@@ -1,19 +1,33 @@
 class PostcodesController < ApplicationController
   
   def create
-    @postcode = Postcode.new(params[:postcode])
+    user_pc = params[:postcode][:postcode]
+    pc = UKPostcode.new(user_pc)
+    if pc.valid?
+      postcode = pc.outcode
 
-    respond_to do |format|
-      if @postcode.save
-        format.html { redirect_to @postcode}
+      if Postcode.where(postcode: postcode).empty?
+        @postcode = Postcode.create(postcode: postcode)
+
+        respond_to do |format|
+          if @postcode.save
+            format.html { redirect_to @postcode}
+          else
+            format.html { render 'main#index'}
+          end
+        end
       else
-        format.html { render 'main#index'}
+        redirect_to postcode_path(Postcode.where(postcode: postcode).first)
       end
+    else
+      flash[:notice] = "Invalid postcode, try again."
+      redirect_to root_path
     end
   end
 
   def show
     @postcode = Postcode.find(params[:id])
+
     @instagram = @postcode.instagram
     
     c = Client.new

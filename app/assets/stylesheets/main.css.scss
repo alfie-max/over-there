@@ -1,3 +1,11 @@
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+}
+
 .hero {
   $hero-background: desaturate(darken($base-accent-color, 20), 30); 
   $hero-color: white;
@@ -8,6 +16,7 @@
   background-position: top;
   background-size: cover;
   padding-bottom: 4em;
+  height: 100%;
 
   .hero-logo {
     height: 10em;
@@ -23,16 +32,10 @@
   .hero-inner {
     @include outer-container;
     @include clearfix;
-    padding: 3em;
+    padding: 150px 3em 3em 3em;
     margin: auto;
     text-align: center;
     color: $hero-color;
-
-    button {
-      @include button(simple, $base-accent-color);
-      font-size: $base-font-size;
-      outline: none;
-    }
 
     .hero-copy {
       padding: 10px;
@@ -65,6 +68,50 @@
         text-align: center;
         font-weight: 600;
         color: #000080;
+      }
+    }
+  }
+}
+
+.search-bar {
+  $search-bar-border-color: $base-border-color;
+  $search-bar-border: 1px solid $search-bar-border-color;
+  $search-bar-background: lighten($search-bar-border-color, 10);
+
+  position: relative; 
+  display: inline-block;
+
+  input {
+    @include box-sizing(border-box);
+    display: block;
+  }
+
+  div.search-and-submit {
+    position: relative;
+
+    input[type=search] {
+      @include appearance(none);
+      width: 100%;
+      padding: .5em .8em;
+      font-size: .9em;
+      border-radius: $base-border-radius * 2;
+      margin: 0;
+    }
+
+    button[type=submit] {
+      @include button(simple, lighten($base-border-color, 10));
+      position: absolute;
+      top: 0.3em;
+      right: 0;
+      bottom: 0.3em;
+      margin-right: 5px;
+      outline: none;
+      padding: 5px 10px;
+
+      img {
+        height: 12px;
+        opacity: .7;
+        vertical-align: top;
       }
     }
   }

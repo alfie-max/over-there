@@ -36,27 +36,30 @@
       %p Lorem ipsum dolor sit amet, elit. Rem, illum.
 
 
-
-
-
-
-%h1=@postcode.postcode
-%h2=@postcode.borough
-
-
--@clients.each do |client|
-  .foursquare_container
-    %h3 Foursquare Info
-    %h4= client.name
-    %p= client.categories.first.name
-    %p
-      = client.location.distance
-      meters away
-    %p
-      = client.stats.checkinsCount
-      check ins
+/ -@clients.each do |client|
+/   .foursquare_container
+/     %h3 Foursquare Info
+/     %h4= client.name
+/     %p= client.categories.first.name
+/     %p
+/       = client.location.distance
+/       meters away
+/     %p
+/       = client.stats.checkinsCount
+/       check ins
 / .instagram
 /   %h3 Does this look Hipster to you?
 /   -@instagram.each do |instagram|
 /     = image_tag instagram["images"]["low_resolution"]["url"]
 /     = instagram["tags"]
+
+/ %p
+/   Big Chain Coffee:
+/   =@postcode.count_high_street_coffee
+
+/ %p
+/   Bike Shops:
+/   =@postcode.check_place(types: "bicycle_store").count
+/ %p
+/   Independent Bike Shops:
+/   =@postcode.check_place(types: "bicycle_store").count - @postcode.count_high_street_bikes
