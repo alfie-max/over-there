@@ -1,21 +1,24 @@
-/ - content_for :templates do
-/   %script{type: "text/template", id: "population-percents"}
-
 %h1
   = @borough.name
+%br
+#borough-show-left
+  %h3 Population Demographics
+  %ul
+    %li.population_percent_youth
+      Youth Population 
+    %li.population_percent_working
+      Working Age Population
+    %li.population_percent_senior
+      Senior Age Population
+    %li.population_percent_foreign
+      Foreign Born Population
 
-%ul
-  %li#population_percent_youth
-    = @borough.population_percent_youth 
-  %li#population_percent_working
-    = @borough.population_percent_working
-  %li#population_percent_senior
-    = @borough.population_percent_senior
-  %li#population_percent_foreign
-    = @borough.population_percent_foreign
-
-%h3 Demographics
-%canvas{id: "myChart", width: "400", height:"400"}
+  %canvas{id: "myChart", width: "400", height:"400"}
+#borough-show-right
+  %h3 Each represents approximately 10,000 people
+  %br
+  - (@borough.population.to_i / 10000).times do
+    = render 'people'
 
 :javascript
       var ctx = $("#myChart").get(0).getContext("2d");
