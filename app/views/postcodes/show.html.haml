@@ -2,17 +2,23 @@
 %h2=@postcode.borough
 
 .instagram
+  %h2 Does this look Hipster to you?
   -@instagram.each do |instagram|
     = image_tag instagram["images"]["low_resolution"]["url"]
     = instagram["tags"]
 %p
   = 'Average property price increase within the last 5 years: '
+
+.zoopla_container
+  %h3 Zoopla Info
+  = 'Hipsters have caused this areas property vaule to change by  '
   = @postcode.growth_average 
-  ='%'
+  ='% of the last 5 years.'
 
 -@clients.each do |client|
-  %div
-    %h3= client.name
+  .foursquare_container
+    %h3 Foursquare Info
+    %h4= client.name
     %p= client.categories.first.name
     %p
       = client.location.distance
