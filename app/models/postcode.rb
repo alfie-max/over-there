@@ -33,7 +33,7 @@ class Postcode < ActiveRecord::Base
   end
 
   def check_place(options = {})
-    client = GooglePlaces::Client.new("AIzaSyAiaOsGTOdOJvqbj3_vi4icujRP-6h6ZPE")
+    client = GooglePlaces::Client.new("AIzaSyAdLAXTikKNuiFqSGdFA2SDpw28jQs8zl8")
 
     client.spots(latitude, longitude, options.merge({radius: 1000}))
   end
