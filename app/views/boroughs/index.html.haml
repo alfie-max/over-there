@@ -1,2 +1,4 @@
 %h1 Boroughs#index
-%p Find me in app/views/boroughs/index.html.haml
+- @boroughs.each do |borough|
+  = link_to borough.name, borough_path(borough)
+  %br
