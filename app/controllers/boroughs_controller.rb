@@ -8,5 +8,6 @@ class BoroughsController < ApplicationController
   end
 
   def show
+    @borough = Borough.find(params[:id])
   end
 end
